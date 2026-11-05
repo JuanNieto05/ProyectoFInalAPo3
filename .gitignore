@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Datos pesados (se descargan, no se versionan)
+data/raw/*
+data/processed/*
+data/interim/*
+!data/**/.gitkeep
+
+# Modelos entrenados
+experiments/checkpoints/*
+!experiments/checkpoints/.gitkeep
+*.h5
+*.pt
+*.pth
+*.pkl
+*.joblib
+
+# Credenciales Kaggle
+kaggle.json
+
+# Sistema / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
