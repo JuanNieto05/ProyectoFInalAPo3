@@ -5,6 +5,7 @@ data/kaggle_raw/
 data/review/
 data/duplicates_removed/
 data/duplicates_preview/
+data/conflicts_removed/
 data/*.zip
 *.zip
 *.rar

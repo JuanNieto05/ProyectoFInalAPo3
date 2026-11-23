@@ -26,14 +26,19 @@ En el despliegue usaremos latencia por imagen, tamaño del modelo y calibración
 ## 2. Comprensión de los datos
 - Distribución de clases, desbalanceo, calidad y variabilidad de imágenes.
 
-Usaremos las frutas manzana, banano, guayaba, limón y naranja. Decidimos escoger frutas comunes y que tambien estén en Kaggle.
+Usamos tres frutas: manzana (`apple`), banano (`banana`) y naranja (`orange`). Escogimos frutas comunes en Colombia que también están en Kaggle.
 
-Se usarán 15 fotos de cada una como material propio junto con los registros del dataset de Kaggle.
+Datos: 5.659 imágenes de Kaggle (tras limpieza) + 46 fotos propias (~5 por fruta y calidad). Kaggle solo trae good/bad; la clase `regular` se construyó reetiquetando a mano 210 imágenes candidatas, más las fotos propias. Total 5.705 imágenes; `regular` es ~3,9 % (desbalance fuerte).
 
 ## 3. Preparación de los datos
 - Segmentación de `mixed_quality`, redimensionado, normalización, aumento de datos, manejo de desbalanceo.
 
-Se puede encontrar el segment.py, donde se leen las imagenes, y se pasan al formato segmentado.
+Pipeline (scripts en `data/`, detalle en `data/README.md` y `docs/GUIA_SIGUIENTE_ETAPA.md`):
+1. `prepare_dataset.py`: corrección EXIF, cuadrado con relleno del color de fondo, 224×224, estimación de `area_ratio`.
+2. `select_regular_candidates.py`: candidatas a `regular` + revisión manual.
+3. `find_duplicates.py`: elimina ~20 % de duplicados (dHash ≤ 10, con espejo).
+4. `resolve_label_conflicts.py`: elimina 31 gemelas con etiqueta contradictoria.
+5. `make_splits.py`: split 70/15/15 estratificado **por grupos de la misma toma** (dHash + ráfagas por hora de captura) para evitar fuga; fotos propias como `test_propias`.
 
 ## 4. Modelado
 - ML clásico (≥ 2 modelos) con validación cruzada / GridSearch.
