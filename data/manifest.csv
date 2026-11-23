@@ -37,7 +37,6 @@ orange_bad_own_00003.jpg,bad/orange_bad_own_00003.jpg,orange,bad,own,n1.png,0.65
 orange_bad_own_00004.jpg,bad/orange_bad_own_00004.jpg,orange,bad,own,n2.png,0.6257,1.0,
 orange_bad_own_00005.jpg,bad/orange_bad_own_00005.jpg,orange,bad,own,n3.png,0.4579,1.0,
 orange_good_own_00001.jpg,good/orange_good_own_00001.jpg,orange,good,own,6051bfeb-e8a9-4753-9a91-0e29552cde1e.jpg,0.6124,1.0,
-orange_good_own_00002.jpg,good/orange_good_own_00002.jpg,orange,good,own,9ee06c07-493c-4bb8-b27a-c23c7f1f1b4b.jpg,0.6237,1.0,
 orange_good_own_00003.jpg,good/orange_good_own_00003.jpg,orange,good,own,d0c25ff1-7dc4-414c-b238-0243678ed8f1.jpg,0.5169,1.0,
 orange_good_own_00004.jpg,good/orange_good_own_00004.jpg,orange,good,own,IMG_3474.HEIC,0.4678,1.0,
 orange_good_own_00005.jpg,good/orange_good_own_00005.jpg,orange,good,own,IMG_3497.HEIC,0.5681,1.0,
@@ -229,9 +228,7 @@ apple_bad_kaggle_00213.jpg,bad/apple_bad_kaggle_00213.jpg,apple,bad,kaggle,IMG_2
 apple_bad_kaggle_00214.jpg,bad/apple_bad_kaggle_00214.jpg,apple,bad,kaggle,IMG_20190824_175407.jpg,0.7742,1.0,
 apple_bad_kaggle_00215.jpg,bad/apple_bad_kaggle_00215.jpg,apple,bad,kaggle,IMG_20190824_175408.jpg,0.8339,1.0,
 apple_bad_kaggle_00217.jpg,bad/apple_bad_kaggle_00217.jpg,apple,bad,kaggle,IMG_20190824_175409_1.jpg,0.793,1.0,
-apple_bad_kaggle_00218.jpg,bad/apple_bad_kaggle_00218.jpg,apple,bad,kaggle,IMG_20190824_175410.jpg,0.7831,1.0,
 apple_regular_kaggle_bad_00220.jpg,regular/apple_regular_kaggle_bad_00220.jpg,apple,regular,kaggle,IMG_20190824_175411.jpg,0.7794,1.0,bad
-apple_bad_kaggle_00224.jpg,bad/apple_bad_kaggle_00224.jpg,apple,bad,kaggle,IMG_20190824_175413_1.jpg,0.7912,1.0,
 apple_bad_kaggle_00225.jpg,bad/apple_bad_kaggle_00225.jpg,apple,bad,kaggle,IMG_20190824_175417.jpg,0.8252,1.0,
 apple_bad_kaggle_00226.jpg,bad/apple_bad_kaggle_00226.jpg,apple,bad,kaggle,IMG_20190824_175417_1.jpg,0.8144,1.0,
 apple_bad_kaggle_00228.jpg,bad/apple_bad_kaggle_00228.jpg,apple,bad,kaggle,IMG_20190824_175418_1.jpg,0.7146,1.0,
@@ -270,7 +267,6 @@ apple_bad_kaggle_00268.jpg,bad/apple_bad_kaggle_00268.jpg,apple,bad,kaggle,IMG_2
 apple_bad_kaggle_00270.jpg,bad/apple_bad_kaggle_00270.jpg,apple,bad,kaggle,IMG_20190824_175540_1.jpg,0.6036,0.9766,
 apple_bad_kaggle_00271.jpg,bad/apple_bad_kaggle_00271.jpg,apple,bad,kaggle,IMG_20190824_175541.jpg,0.6181,0.9844,
 apple_regular_kaggle_bad_00272.jpg,regular/apple_regular_kaggle_bad_00272.jpg,apple,regular,kaggle,IMG_20190824_175547.jpg,0.6196,1.0,bad
-apple_bad_kaggle_00273.jpg,bad/apple_bad_kaggle_00273.jpg,apple,bad,kaggle,IMG_20190824_175547_1.jpg,0.6115,0.9961,
 apple_bad_kaggle_00274.jpg,bad/apple_bad_kaggle_00274.jpg,apple,bad,kaggle,IMG_20190824_175548.jpg,0.6127,0.9648,
 apple_bad_kaggle_00278.jpg,bad/apple_bad_kaggle_00278.jpg,apple,bad,kaggle,IMG_20190824_175631.jpg,0.8935,1.0,
 apple_bad_kaggle_00282.jpg,bad/apple_bad_kaggle_00282.jpg,apple,bad,kaggle,IMG_20190824_175634.jpg,0.8914,1.0,
@@ -754,7 +750,6 @@ apple_bad_kaggle_00953.jpg,bad/apple_bad_kaggle_00953.jpg,apple,bad,kaggle,IMG_2
 apple_bad_kaggle_00954.jpg,bad/apple_bad_kaggle_00954.jpg,apple,bad,kaggle,IMG_20190910_172618.jpg,0.554,1.0,
 apple_bad_kaggle_00955.jpg,bad/apple_bad_kaggle_00955.jpg,apple,bad,kaggle,IMG_20190910_172622.jpg,0.7499,1.0,
 apple_regular_kaggle_bad_00956.jpg,regular/apple_regular_kaggle_bad_00956.jpg,apple,regular,kaggle,IMG_20190910_172622_1.jpg,0.7587,1.0,bad
-apple_bad_kaggle_00957.jpg,bad/apple_bad_kaggle_00957.jpg,apple,bad,kaggle,IMG_20190910_172622_2.jpg,0.7568,1.0,
 apple_bad_kaggle_00958.jpg,bad/apple_bad_kaggle_00958.jpg,apple,bad,kaggle,IMG_20190910_172623.jpg,0.745,1.0,
 apple_bad_kaggle_00959.jpg,bad/apple_bad_kaggle_00959.jpg,apple,bad,kaggle,IMG_20190910_172623_1.jpg,0.7663,1.0,
 apple_bad_kaggle_00960.jpg,bad/apple_bad_kaggle_00960.jpg,apple,bad,kaggle,IMG_20190910_172624.jpg,0.7644,1.0,
@@ -1688,7 +1683,6 @@ banana_bad_kaggle_00995.jpg,bad/banana_bad_kaggle_00995.jpg,banana,bad,kaggle,IM
 banana_bad_kaggle_00996.jpg,bad/banana_bad_kaggle_00996.jpg,banana,bad,kaggle,IMG_8039.JPG,0.5632,1.0,
 banana_bad_kaggle_00997.jpg,bad/banana_bad_kaggle_00997.jpg,banana,bad,kaggle,IMG_8040.JPG,0.5673,1.0,
 banana_bad_kaggle_00998.jpg,bad/banana_bad_kaggle_00998.jpg,banana,bad,kaggle,IMG_8041.JPG,0.3991,1.0,
-banana_bad_kaggle_00999.jpg,bad/banana_bad_kaggle_00999.jpg,banana,bad,kaggle,IMG_8042.JPG,0.4018,1.0,
 banana_regular_kaggle_bad_01000.jpg,regular/banana_regular_kaggle_bad_01000.jpg,banana,regular,kaggle,IMG_8043.JPG,0.4023,1.0,bad
 banana_bad_kaggle_01001.jpg,bad/banana_bad_kaggle_01001.jpg,banana,bad,kaggle,IMG_8044.JPG,0.5977,1.0,
 banana_bad_kaggle_01002.jpg,bad/banana_bad_kaggle_01002.jpg,banana,bad,kaggle,IMG_8045.JPG,0.6815,1.0,
@@ -1940,7 +1934,6 @@ orange_bad_kaggle_00241.jpg,bad/orange_bad_kaggle_00241.jpg,orange,bad,kaggle,IM
 orange_bad_kaggle_00245.jpg,bad/orange_bad_kaggle_00245.jpg,orange,bad,kaggle,IMG_20190824_174930_1.jpg,0.5209,1.0,
 orange_regular_kaggle_bad_00248.jpg,regular/orange_regular_kaggle_bad_00248.jpg,orange,regular,kaggle,IMG_20190824_174944.jpg,0.5834,1.0,bad
 orange_bad_kaggle_00250.jpg,bad/orange_bad_kaggle_00250.jpg,orange,bad,kaggle,IMG_20190824_174945.jpg,0.7499,1.0,
-orange_bad_kaggle_00251.jpg,bad/orange_bad_kaggle_00251.jpg,orange,bad,kaggle,IMG_20190824_174946.jpg,0.7277,1.0,
 orange_regular_kaggle_bad_00252.jpg,regular/orange_regular_kaggle_bad_00252.jpg,orange,regular,kaggle,IMG_20190824_174947.jpg,0.7432,1.0,bad
 orange_bad_kaggle_00255.jpg,bad/orange_bad_kaggle_00255.jpg,orange,bad,kaggle,IMG_20190824_174948_1.jpg,0.7658,1.0,
 orange_bad_kaggle_00257.jpg,bad/orange_bad_kaggle_00257.jpg,orange,bad,kaggle,IMG_20190824_174949_1.jpg,0.749,1.0,
@@ -1970,7 +1963,6 @@ orange_bad_kaggle_00305.jpg,bad/orange_bad_kaggle_00305.jpg,orange,bad,kaggle,IM
 orange_bad_kaggle_00306.jpg,bad/orange_bad_kaggle_00306.jpg,orange,bad,kaggle,IMG_20190824_175027_1.jpg,0.6443,1.0,
 orange_bad_kaggle_00307.jpg,bad/orange_bad_kaggle_00307.jpg,orange,bad,kaggle,IMG_20190824_175028.jpg,0.6413,1.0,
 orange_bad_kaggle_00308.jpg,bad/orange_bad_kaggle_00308.jpg,orange,bad,kaggle,IMG_20190824_175029.jpg,0.6383,1.0,
-orange_bad_kaggle_00310.jpg,bad/orange_bad_kaggle_00310.jpg,orange,bad,kaggle,IMG_20190824_175030_1.jpg,0.6116,1.0,
 orange_regular_kaggle_bad_00311.jpg,regular/orange_regular_kaggle_bad_00311.jpg,orange,regular,kaggle,IMG_20190824_175031.jpg,0.5981,1.0,bad
 orange_regular_kaggle_bad_00312.jpg,regular/orange_regular_kaggle_bad_00312.jpg,orange,regular,kaggle,IMG_20190824_175032.jpg,0.5587,1.0,bad
 orange_bad_kaggle_00314.jpg,bad/orange_bad_kaggle_00314.jpg,orange,bad,kaggle,IMG_20190824_175034.jpg,0.5713,1.0,
@@ -1988,7 +1980,6 @@ orange_bad_kaggle_00334.jpg,bad/orange_bad_kaggle_00334.jpg,orange,bad,kaggle,IM
 orange_bad_kaggle_00335.jpg,bad/orange_bad_kaggle_00335.jpg,orange,bad,kaggle,IMG_20190824_175048_1.jpg,0.6256,1.0,
 orange_bad_kaggle_00336.jpg,bad/orange_bad_kaggle_00336.jpg,orange,bad,kaggle,IMG_20190824_175051.jpg,0.5618,1.0,
 orange_regular_kaggle_bad_00341.jpg,regular/orange_regular_kaggle_bad_00341.jpg,orange,regular,kaggle,IMG_20190824_175054_1.jpg,0.5275,1.0,bad
-orange_bad_kaggle_00342.jpg,bad/orange_bad_kaggle_00342.jpg,orange,bad,kaggle,IMG_20190824_175055.jpg,0.5331,1.0,
 orange_bad_kaggle_00346.jpg,bad/orange_bad_kaggle_00346.jpg,orange,bad,kaggle,IMG_20190824_175057_1.jpg,0.5467,1.0,
 orange_bad_kaggle_00347.jpg,bad/orange_bad_kaggle_00347.jpg,orange,bad,kaggle,IMG_20190824_175058.jpg,0.53,1.0,
 orange_bad_kaggle_00350.jpg,bad/orange_bad_kaggle_00350.jpg,orange,bad,kaggle,IMG_20190824_175101.jpg,0.5213,1.0,
@@ -4009,11 +4000,8 @@ banana_good_kaggle_00222.jpg,good/banana_good_kaggle_00222.jpg,banana,good,kaggl
 banana_good_kaggle_00223.jpg,good/banana_good_kaggle_00223.jpg,banana,good,kaggle,IMG_8566.JPG,0.7185,1.0,
 banana_good_kaggle_00224.jpg,good/banana_good_kaggle_00224.jpg,banana,good,kaggle,IMG_8567.JPG,0.8868,1.0,
 banana_good_kaggle_00225.jpg,good/banana_good_kaggle_00225.jpg,banana,good,kaggle,IMG_8568.JPG,0.897,1.0,
-banana_good_kaggle_00227.jpg,good/banana_good_kaggle_00227.jpg,banana,good,kaggle,IMG_8570.JPG,0.8866,1.0,
-banana_good_kaggle_00228.jpg,good/banana_good_kaggle_00228.jpg,banana,good,kaggle,IMG_8571.JPG,0.8903,1.0,
 banana_regular_kaggle_good_00229.jpg,regular/banana_regular_kaggle_good_00229.jpg,banana,regular,kaggle,IMG_8572.JPG,0.8862,1.0,good
 banana_good_kaggle_00233.jpg,good/banana_good_kaggle_00233.jpg,banana,good,kaggle,IMG_8576.JPG,0.8817,1.0,
-banana_good_kaggle_00235.jpg,good/banana_good_kaggle_00235.jpg,banana,good,kaggle,IMG_8578.JPG,0.8728,1.0,
 banana_regular_kaggle_good_00237.jpg,regular/banana_regular_kaggle_good_00237.jpg,banana,regular,kaggle,IMG_8580.JPG,0.8704,1.0,good
 banana_good_kaggle_00238.jpg,good/banana_good_kaggle_00238.jpg,banana,good,kaggle,IMG_8581.JPG,0.8465,1.0,
 banana_good_kaggle_00239.jpg,good/banana_good_kaggle_00239.jpg,banana,good,kaggle,IMG_8582.JPG,0.8482,1.0,
@@ -4029,11 +4017,8 @@ banana_regular_kaggle_good_00256.jpg,regular/banana_regular_kaggle_good_00256.jp
 banana_good_kaggle_00257.jpg,good/banana_good_kaggle_00257.jpg,banana,good,kaggle,IMG_8600.JPG,0.9547,1.0,
 banana_regular_kaggle_good_00258.jpg,regular/banana_regular_kaggle_good_00258.jpg,banana,regular,kaggle,IMG_8601.JPG,0.9407,1.0,good
 banana_regular_kaggle_good_00259.jpg,regular/banana_regular_kaggle_good_00259.jpg,banana,regular,kaggle,IMG_8602.JPG,0.9327,1.0,good
-banana_good_kaggle_00260.jpg,good/banana_good_kaggle_00260.jpg,banana,good,kaggle,IMG_8603.JPG,0.9312,1.0,
-banana_good_kaggle_00261.jpg,good/banana_good_kaggle_00261.jpg,banana,good,kaggle,IMG_8604.JPG,0.925,1.0,
 banana_regular_kaggle_good_00262.jpg,regular/banana_regular_kaggle_good_00262.jpg,banana,regular,kaggle,IMG_8605.JPG,0.9231,1.0,good
 banana_regular_kaggle_good_00264.jpg,regular/banana_regular_kaggle_good_00264.jpg,banana,regular,kaggle,IMG_8607.JPG,0.921,1.0,good
-banana_good_kaggle_00265.jpg,good/banana_good_kaggle_00265.jpg,banana,good,kaggle,IMG_8608.JPG,0.9212,1.0,
 banana_regular_kaggle_good_00266.jpg,regular/banana_regular_kaggle_good_00266.jpg,banana,regular,kaggle,IMG_8609.JPG,0.9281,1.0,good
 banana_good_kaggle_00267.jpg,good/banana_good_kaggle_00267.jpg,banana,good,kaggle,IMG_8610.JPG,0.9252,1.0,
 banana_good_kaggle_00269.jpg,good/banana_good_kaggle_00269.jpg,banana,good,kaggle,IMG_8612.JPG,0.9452,1.0,
@@ -4080,10 +4065,7 @@ banana_good_kaggle_00332.jpg,good/banana_good_kaggle_00332.jpg,banana,good,kaggl
 banana_good_kaggle_00333.jpg,good/banana_good_kaggle_00333.jpg,banana,good,kaggle,IMG_8676.JPG,0.8628,1.0,
 banana_good_kaggle_00334.jpg,good/banana_good_kaggle_00334.jpg,banana,good,kaggle,IMG_8677.JPG,0.8642,1.0,
 banana_good_kaggle_00335.jpg,good/banana_good_kaggle_00335.jpg,banana,good,kaggle,IMG_8678.JPG,0.8641,1.0,
-banana_good_kaggle_00337.jpg,good/banana_good_kaggle_00337.jpg,banana,good,kaggle,IMG_8680.JPG,0.8664,1.0,
 banana_regular_kaggle_good_00340.jpg,regular/banana_regular_kaggle_good_00340.jpg,banana,regular,kaggle,IMG_8683.JPG,0.8691,1.0,good
-banana_good_kaggle_00341.jpg,good/banana_good_kaggle_00341.jpg,banana,good,kaggle,IMG_8684.JPG,0.8659,1.0,
-banana_good_kaggle_00343.jpg,good/banana_good_kaggle_00343.jpg,banana,good,kaggle,IMG_8686.JPG,0.8721,1.0,
 banana_good_kaggle_00344.jpg,good/banana_good_kaggle_00344.jpg,banana,good,kaggle,IMG_8687.JPG,0.8213,1.0,
 banana_good_kaggle_00345.jpg,good/banana_good_kaggle_00345.jpg,banana,good,kaggle,IMG_8688.JPG,0.8179,1.0,
 banana_good_kaggle_00346.jpg,good/banana_good_kaggle_00346.jpg,banana,good,kaggle,IMG_8689.JPG,0.8171,1.0,
@@ -4092,11 +4074,8 @@ banana_good_kaggle_00351.jpg,good/banana_good_kaggle_00351.jpg,banana,good,kaggl
 banana_good_kaggle_00352.jpg,good/banana_good_kaggle_00352.jpg,banana,good,kaggle,IMG_8695.JPG,0.8439,1.0,
 banana_good_kaggle_00354.jpg,good/banana_good_kaggle_00354.jpg,banana,good,kaggle,IMG_8697.JPG,0.8382,1.0,
 banana_good_kaggle_00355.jpg,good/banana_good_kaggle_00355.jpg,banana,good,kaggle,IMG_8698.JPG,0.8408,1.0,
-banana_good_kaggle_00357.jpg,good/banana_good_kaggle_00357.jpg,banana,good,kaggle,IMG_8700.JPG,0.8929,1.0,
-banana_good_kaggle_00359.jpg,good/banana_good_kaggle_00359.jpg,banana,good,kaggle,IMG_8702.JPG,0.8998,1.0,
 banana_regular_kaggle_good_00360.jpg,regular/banana_regular_kaggle_good_00360.jpg,banana,regular,kaggle,IMG_8703.JPG,0.8946,1.0,good
 banana_regular_kaggle_good_00364.jpg,regular/banana_regular_kaggle_good_00364.jpg,banana,regular,kaggle,IMG_8707.JPG,0.89,1.0,good
-banana_good_kaggle_00365.jpg,good/banana_good_kaggle_00365.jpg,banana,good,kaggle,IMG_8708.JPG,0.8858,1.0,
 banana_good_kaggle_00366.jpg,good/banana_good_kaggle_00366.jpg,banana,good,kaggle,IMG_8709.JPG,0.7738,1.0,
 banana_good_kaggle_00367.jpg,good/banana_good_kaggle_00367.jpg,banana,good,kaggle,IMG_8710.JPG,0.7814,1.0,
 banana_good_kaggle_00368.jpg,good/banana_good_kaggle_00368.jpg,banana,good,kaggle,IMG_8711.JPG,0.7779,1.0,
@@ -4142,7 +4121,6 @@ banana_good_kaggle_00433.jpg,good/banana_good_kaggle_00433.jpg,banana,good,kaggl
 banana_good_kaggle_00434.jpg,good/banana_good_kaggle_00434.jpg,banana,good,kaggle,IMG_8777.JPG,0.5465,1.0,
 banana_good_kaggle_00435.jpg,good/banana_good_kaggle_00435.jpg,banana,good,kaggle,IMG_8778.JPG,0.5441,1.0,
 banana_good_kaggle_00436.jpg,good/banana_good_kaggle_00436.jpg,banana,good,kaggle,IMG_8779.JPG,0.537,1.0,
-banana_good_kaggle_00437.jpg,good/banana_good_kaggle_00437.jpg,banana,good,kaggle,IMG_8780.JPG,0.7071,1.0,
 banana_regular_kaggle_good_00438.jpg,regular/banana_regular_kaggle_good_00438.jpg,banana,regular,kaggle,IMG_8781.JPG,0.7058,1.0,good
 banana_regular_kaggle_good_00440.jpg,regular/banana_regular_kaggle_good_00440.jpg,banana,regular,kaggle,IMG_8783.JPG,0.7064,1.0,good
 banana_regular_kaggle_good_00441.jpg,regular/banana_regular_kaggle_good_00441.jpg,banana,regular,kaggle,IMG_8784.JPG,0.6287,1.0,good
@@ -5165,10 +5143,8 @@ orange_good_kaggle_00597.jpg,good/orange_good_kaggle_00597.jpg,orange,good,kaggl
 orange_good_kaggle_00598.jpg,good/orange_good_kaggle_00598.jpg,orange,good,kaggle,IMG_20190924_152404_1.jpg,0.8715,1.0,
 orange_good_kaggle_00601.jpg,good/orange_good_kaggle_00601.jpg,orange,good,kaggle,IMG_20190924_152406.jpg,0.8705,1.0,
 orange_good_kaggle_00603.jpg,good/orange_good_kaggle_00603.jpg,orange,good,kaggle,IMG_20190924_152407.jpg,0.8688,1.0,
-orange_good_kaggle_00606.jpg,good/orange_good_kaggle_00606.jpg,orange,good,kaggle,IMG_20190924_152451.jpg,0.6164,0.9922,
 orange_regular_kaggle_good_00607.jpg,regular/orange_regular_kaggle_good_00607.jpg,orange,regular,kaggle,IMG_20190924_152451_1.jpg,0.6103,1.0,good
 orange_regular_kaggle_good_00609.jpg,regular/orange_regular_kaggle_good_00609.jpg,orange,regular,kaggle,IMG_20190924_152453.jpg,0.6229,0.9766,good
-orange_good_kaggle_00611.jpg,good/orange_good_kaggle_00611.jpg,orange,good,kaggle,IMG_20190924_152455.jpg,0.6221,0.9766,
 orange_good_kaggle_00612.jpg,good/orange_good_kaggle_00612.jpg,orange,good,kaggle,IMG_20190924_152513.jpg,0.8485,1.0,
 orange_good_kaggle_00613.jpg,good/orange_good_kaggle_00613.jpg,orange,good,kaggle,IMG_20190924_152516.jpg,0.7896,1.0,
 orange_good_kaggle_00614.jpg,good/orange_good_kaggle_00614.jpg,orange,good,kaggle,IMG_20190924_152517.jpg,0.7934,1.0,
@@ -5252,17 +5228,12 @@ orange_good_kaggle_00691.jpg,good/orange_good_kaggle_00691.jpg,orange,good,kaggl
 orange_good_kaggle_00692.jpg,good/orange_good_kaggle_00692.jpg,orange,good,kaggle,IMG_20190924_152817.jpg,0.9234,1.0,
 orange_regular_kaggle_good_00693.jpg,regular/orange_regular_kaggle_good_00693.jpg,orange,regular,kaggle,IMG_20190924_152819.jpg,0.8923,1.0,good
 orange_regular_kaggle_good_00694.jpg,regular/orange_regular_kaggle_good_00694.jpg,orange,regular,kaggle,IMG_20190924_152819_1.jpg,0.8974,1.0,good
-orange_good_kaggle_00695.jpg,good/orange_good_kaggle_00695.jpg,orange,good,kaggle,IMG_20190924_152820.jpg,0.8885,1.0,
 orange_regular_kaggle_good_00696.jpg,regular/orange_regular_kaggle_good_00696.jpg,orange,regular,kaggle,IMG_20190924_152821.jpg,0.8277,1.0,good
-orange_good_kaggle_00697.jpg,good/orange_good_kaggle_00697.jpg,orange,good,kaggle,IMG_20190924_152830.jpg,0.8335,1.0,
 orange_regular_kaggle_good_00698.jpg,regular/orange_regular_kaggle_good_00698.jpg,orange,regular,kaggle,IMG_20190924_152830_1.jpg,0.817,1.0,good
 orange_regular_kaggle_good_00699.jpg,regular/orange_regular_kaggle_good_00699.jpg,orange,regular,kaggle,IMG_20190924_152831.jpg,0.7289,1.0,good
 orange_good_kaggle_00700.jpg,good/orange_good_kaggle_00700.jpg,orange,good,kaggle,IMG_20190924_152832.jpg,0.7133,1.0,
 orange_regular_kaggle_good_00703.jpg,regular/orange_regular_kaggle_good_00703.jpg,orange,regular,kaggle,IMG_20190924_152839.jpg,0.845,1.0,good
-orange_good_kaggle_00704.jpg,good/orange_good_kaggle_00704.jpg,orange,good,kaggle,IMG_20190924_152839_1.jpg,0.7966,1.0,
-orange_good_kaggle_00708.jpg,good/orange_good_kaggle_00708.jpg,orange,good,kaggle,IMG_20190924_152844.jpg,0.7412,1.0,
 orange_regular_kaggle_good_00711.jpg,regular/orange_regular_kaggle_good_00711.jpg,orange,regular,kaggle,IMG_20190924_152846.jpg,0.7308,1.0,good
-orange_good_kaggle_00714.jpg,good/orange_good_kaggle_00714.jpg,orange,good,kaggle,IMG_20190924_152848.jpg,0.7674,1.0,
 orange_regular_kaggle_good_00716.jpg,regular/orange_regular_kaggle_good_00716.jpg,orange,regular,kaggle,IMG_20190924_152849_1.jpg,0.7647,1.0,good
 orange_regular_kaggle_good_00718.jpg,regular/orange_regular_kaggle_good_00718.jpg,orange,regular,kaggle,IMG_20190924_152853.jpg,0.741,1.0,good
 orange_good_kaggle_00719.jpg,good/orange_good_kaggle_00719.jpg,orange,good,kaggle,IMG_20190924_152854.jpg,0.7271,1.0,
@@ -5273,10 +5244,8 @@ orange_good_kaggle_00724.jpg,good/orange_good_kaggle_00724.jpg,orange,good,kaggl
 orange_good_kaggle_00727.jpg,good/orange_good_kaggle_00727.jpg,orange,good,kaggle,IMG_20190924_152900.jpg,0.7317,1.0,
 orange_regular_kaggle_good_00728.jpg,regular/orange_regular_kaggle_good_00728.jpg,orange,regular,kaggle,IMG_20190924_152900_1.jpg,0.7338,1.0,good
 orange_good_kaggle_00729.jpg,good/orange_good_kaggle_00729.jpg,orange,good,kaggle,IMG_20190924_152905.jpg,0.876,1.0,
-orange_good_kaggle_00730.jpg,good/orange_good_kaggle_00730.jpg,orange,good,kaggle,IMG_20190924_152908.jpg,0.8781,1.0,
 orange_regular_kaggle_good_00731.jpg,regular/orange_regular_kaggle_good_00731.jpg,orange,regular,kaggle,IMG_20190924_152909.jpg,0.872,1.0,good
 orange_regular_kaggle_good_00733.jpg,regular/orange_regular_kaggle_good_00733.jpg,orange,regular,kaggle,IMG_20190924_152921.jpg,0.8999,1.0,good
-orange_good_kaggle_00735.jpg,good/orange_good_kaggle_00735.jpg,orange,good,kaggle,IMG_20190924_152922.jpg,0.8947,1.0,
 orange_good_kaggle_00737.jpg,good/orange_good_kaggle_00737.jpg,orange,good,kaggle,IMG_20190924_152924.jpg,0.8811,1.0,
 orange_good_kaggle_00738.jpg,good/orange_good_kaggle_00738.jpg,orange,good,kaggle,IMG_20190924_152926.jpg,0.8902,1.0,
 orange_good_kaggle_00740.jpg,good/orange_good_kaggle_00740.jpg,orange,good,kaggle,IMG_20190924_152927.jpg,0.8923,1.0,

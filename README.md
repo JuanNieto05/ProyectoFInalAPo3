@@ -53,11 +53,11 @@ El diagrama de flujo personalizado de CRISP-DM está en [docs/crisp_dm.md](docs/
 ```
 ProyectoFInalAPo3/
 ├── data/                 # Datos (ver data/README.md)
-│   ├── raw/              # Dataset Kaggle original (no versionado)
-│   ├── own_collection/   # Fotos recolectadas por el grupo
-│   ├── annotations/      # Etiquetas (calidad + tamaño) en CSV
-│   ├── interim/          # Datos intermedios (recortes, segmentación)
-│   └── processed/        # Datos listos para entrenar (no versionado)
+│   ├── fotos_originales/ # Fotos recolectadas por el grupo (originales)
+│   ├── processed/        # Imágenes 224×224 listas para entrenar (good/regular/bad)
+│   ├── manifest.csv      # Metadatos por imagen
+│   ├── splits.csv        # Fuente única de verdad: split, grupo, tamaño
+│   └── *.py              # Pipeline de preparación (ver data/README.md)
 ├── notebooks/            # Notebooks numerados por fase CRISP-DM
 ├── src/                  # Código fuente reutilizable
 │   ├── data/             # Carga, segmentación y preprocesamiento
@@ -89,7 +89,7 @@ ProyectoFInalAPo3/
    ```bash
    pip install -r requirements.txt
    ```
-3. Descargar el dataset de Kaggle en `data/raw/` (ver [data/README.md](data/README.md)).
+3. Los datos ya procesados están versionados en `data/processed/` y `data/splits.csv`. Solo hace falta descargar Kaggle en `data/kaggle_raw/` para regenerarlos desde cero (ver [data/README.md](data/README.md) y [docs/GUIA_SIGUIENTE_ETAPA.md](docs/GUIA_SIGUIENTE_ETAPA.md)).
 4. Ejecutar los notebooks en orden (`01_` → `05_`).
 5. Lanzar la aplicación:
    ```bash

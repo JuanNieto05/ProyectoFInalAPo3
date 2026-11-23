@@ -1,5 +1,7 @@
 numpy
 pandas
+pillow
+pillow-heif
 matplotlib
 seaborn
 opencv-python
