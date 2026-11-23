@@ -120,6 +120,12 @@ Tres frutas (apple, banana, orange) × tres calidades (good, regular, bad). Tota
   (`area_ratio`), y las imágenes de Kaggle vienen ya recortadas. Es un proxy; en las fotos propias es
   más creíble solo si se tomaron a distancia similar. Los cortes de los terciles salen de `train`
   (Kaggle), por eso las fotos propias se concentran en "mediano".
+- **El fondo es un atajo en Kaggle** (ver `notebooks/02_data_understanding_eda.ipynb`, sección 4.1).
+  Un Random Forest que solo ve el borde de la imagen logra F1 ≈ 0,89 en good y bad: muchas fotos de una
+  misma clase comparten superficie. Por eso las características manuales deben calcularse **solo sobre la
+  fruta**, la CNN necesita aumento de color y recorte (y conviene probar enmascarar el fondo), y
+  `test_propias` es la prueba real de generalización. Además, en Kaggle la fruta suele estar en la mano: la
+  segmentación simple por color del borde incluye la mano.
 - **Solo 46 fotos propias.** Las métricas sobre `test_propias` son indicativas, no concluyentes.
 - **Cambio de dominio.** Las imágenes de Kaggle y las fotos de celular/cámara web difieren en luz,
   fondo y encuadre; es esperable que el rendimiento baje en `test_propias`.
