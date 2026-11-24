@@ -1,0 +1,12 @@
+{
+  "mejor": "filtros_x2",
+  "mayor_macro_f1_val": "sin_aumento",
+  "criterio": "ver PRINCIPAL en entrenar_cnn.py",
+  "semillas_fruta": [
+    "filtros_x2",
+    "filtros_x2_s43"
+  ],
+  "semillas_completa": [
+    "filtros_x2_completa_s42"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "nombre": "filtros_x2_s43",
+  "cfg": {
+    "enmascarar": true,
+    "aumento": true,
+    "balance": "pesos",
+    "lr": 0.001,
+    "dropout": 0.3,
+    "filtros": [
+      32,
+      64,
+      128
+    ],
+    "wd": 0.0001,
+    "lote": 64,
+    "epocas": 100,
+    "paciencia": 15,
+    "semilla": 43
+  },
+  "mejor_epoca": 79,
+  "epocas": 94,
+  "segundos": 5347,
+  "val": {
+    "macro-F1": 0.6678,
+    "acc. balanceada": 0.7994,
+    "accuracy": 0.8081,
+    "kappa": 0.6746,
+    "F1 good": 0.8266,
+    "recall good": 0.7205,
+    "precisión good": 0.9694,
+    "F1 regular": 0.2762,
+    "recall regular": 0.7812,
+    "precisión regular": 0.1678,
+    "F1 bad": 0.9007,
+    "recall bad": 0.8966,
+    "precisión bad": 0.9048
+  }
+}

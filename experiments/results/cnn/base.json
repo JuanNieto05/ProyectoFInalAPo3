@@ -1,0 +1,38 @@
+{
+  "nombre": "base",
+  "cfg": {
+    "enmascarar": true,
+    "aumento": true,
+    "balance": "pesos",
+    "lr": 0.001,
+    "dropout": 0.3,
+    "filtros": [
+      16,
+      32,
+      64
+    ],
+    "wd": 0.0001,
+    "lote": 64,
+    "epocas": 100,
+    "paciencia": 15,
+    "semilla": 42
+  },
+  "mejor_epoca": 66,
+  "epocas": 81,
+  "segundos": 2297,
+  "val": {
+    "macro-F1": 0.6307,
+    "acc. balanceada": 0.6879,
+    "accuracy": 0.8004,
+    "kappa": 0.6557,
+    "F1 good": 0.8316,
+    "recall good": 0.7409,
+    "precisión good": 0.9477,
+    "F1 regular": 0.175,
+    "recall regular": 0.4375,
+    "precisión regular": 0.1094,
+    "F1 bad": 0.8854,
+    "recall bad": 0.8854,
+    "precisión bad": 0.8854
+  }
+}
