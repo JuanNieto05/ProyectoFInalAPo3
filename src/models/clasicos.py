@@ -9,7 +9,7 @@ afecta.
 
 El desbalance de "regular" (~3,8 % en train) se compensa con pesos de clase
 inversamente proporcionales a la frecuencia: w_c = n / (K * n_c). Así, en la
-función de pérdida, equivocarse en una imagen "regular" cuesta ~9 veces más que
+función de pérdida, equivocarse en una imagen "regular" cuesta ~14 veces más que
 en una "good".
 """
 from __future__ import annotations
