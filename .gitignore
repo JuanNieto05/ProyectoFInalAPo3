@@ -22,7 +22,7 @@ data/*.zip
 # MODELOS ENTRENADOS (pesados). Si el despliegue necesita el modelo final,
 # agregalo a la fuerza:  git add -f models/modelo_final.keras
 # =====================================================
-models/
+/models/
 checkpoints/
 runs/
 lightning_logs/
