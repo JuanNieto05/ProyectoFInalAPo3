@@ -1,0 +1,7 @@
+# Normaliza finales de linea (LF en el repo) para todos los sistemas
+* text=auto
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.HEIC binary
+*.heic binary

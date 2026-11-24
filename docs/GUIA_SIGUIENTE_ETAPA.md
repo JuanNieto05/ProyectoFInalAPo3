@@ -17,7 +17,8 @@ Resume qué hay, qué NO se debe tocar y qué falta según el enunciado.
 |---|---|
 | `data/processed/{good,regular,bad}/` | Imágenes finales, 224×224 RGB, fondo rellenado (sin deformar). La carpeta es la clase de calidad. Versionadas en git. |
 | `data/manifest.csv` | Una fila por imagen: fruta, calidad, fuente (`own`/`kaggle`), archivo original, `area_ratio`, `diam_ratio`, `relabeled_from`. |
-| `data/splits.csv` | **Fuente única de verdad de los splits** + columnas `grupo` y `tamano`. Todos deben cargar los datos desde aquí. |
+| `data/splits.csv` | **Fuente única de verdad de los splits** + columnas `grupo`, `tamano`, `d_eq` y `mask_area`. Todos deben cargar los datos desde aquí. |
+| `data/masks/` + `data/masks.csv` | Máscara de la fruta (GrabCut) de cada imagen. Cargar con `src.data.carga.cargar_mascara`. |
 | `data/duplicates.csv` | Parejas de duplicados detectadas (evidencia de la limpieza). |
 | `data/conflicts_removed.csv` | Las 31 imágenes eliminadas por conflicto de etiqueta y su gemela conservada. |
 | `data/fotos_originales/` | Fotos propias originales (respaldo). |
@@ -68,8 +69,11 @@ Tres frutas (apple, banana, orange) × tres calidades (good, regular, bad). Tota
 - **Desbalance de "regular"**: probar pesos de clase (`class_weight`) y/o aumento de datos solo en esa clase.
   Comparar con y sin, y documentar el efecto.
 - **Tamaño**: el enunciado pide tamaño o diámetro normalizado. Opciones: clasificar `tamano`
-  (pequeño/mediano/grande) o hacer regresión sobre `area_ratio`. Ver advertencias de la sección 4.
-  **No usar `diam_ratio`**: vale ≈1,0 en casi todas las imágenes y no discrimina.
+  (pequeño/mediano/grande) o reportar el diámetro normalizado. **Decisión tomada:** el tamaño se *mide* con la
+  máscara (`d_eq`, diámetro equivalente normalizado) y `tamano` son sus terciles por fruta; no hace falta un
+  modelo de tamaño. **No usar `diam_ratio` ni `area_ratio`** (ver sección 4).
+- **Entrenar sobre la fruta segmentada** (fondo pintado de gris con `aplicar_mascara`, o características
+  calculadas solo dentro de la máscara). Ver `notebooks/03_data_preparation.ipynb`.
 - Fijar semillas (`random_state`, `torch.manual_seed`/`tf.random.set_seed`) y guardar los modelos entrenados.
 
 ### 3.2 Evaluación (fase 5)
@@ -116,10 +120,13 @@ Tres frutas (apple, banana, orange) × tres calidades (good, regular, bad). Tota
   fotos propias. Además, varias de esas imágenes son de la misma ráfaga: hay solo **78 (apple),
   25 (banana) y 49 (orange) grupos independientes** con alguna "regular". Su test es pequeño
   (9–13 imágenes por fruta), así que las métricas por fruta de esa clase tienen mucha incertidumbre.
-- **El tamaño no es un tamaño real.** Se mide como la fracción de la imagen que ocupa la fruta
-  (`area_ratio`), y las imágenes de Kaggle vienen ya recortadas. Es un proxy; en las fotos propias es
-  más creíble solo si se tomaron a distancia similar. Los cortes de los terciles salen de `train`
-  (Kaggle), por eso las fotos propias se concentran en "mediano".
+- **El tamaño no es un tamaño real.** `area_ratio` (umbral simple) resultó poco fiable: en las fotos propias
+  vale ~0,6 cuando la fruta ocupa ~10 % de la imagen. Ahora se usa la máscara GrabCut: `d_eq` =
+  2·sqrt(`mask_area`/π). Sigue siendo relativo a la foto: depende de la distancia de captura. Por eso 38 de
+  las 46 fotos propias quedan como "pequeño" (se tomaron más lejos que las de Kaggle). En el despliegue hay
+  que fijar la distancia de la cámara y calibrar los cortes.
+- **Segmentación.** GrabCut con priors (`src/data/segmentacion.py`) elimina el atajo del fondo (ver
+  notebook 03). En Kaggle la mano puede quedar parcialmente dentro de la máscara.
 - **El fondo es un atajo en Kaggle** (ver `notebooks/02_data_understanding_eda.ipynb`, sección 4.1).
   Un Random Forest que solo ve el borde de la imagen logra F1 ≈ 0,89 en good y bad: muchas fotos de una
   misma clase comparten superficie. Por eso las características manuales deben calcularse **solo sobre la
@@ -145,11 +152,13 @@ python data\select_regular_candidates.py --apply
 python data\find_duplicates.py                 # revisar; luego con --mover
 python data\find_duplicates.py --mover
 python data\resolve_label_conflicts.py
+python -m src.data.generar_mascaras            # ~20 min
 python data\make_splits.py
 
 # Agregar fotos nuevas más adelante
 python data\prepare_dataset.py --src data\fotos_originales --append
 python data\find_duplicates.py                 # solo reporta; revisar duplicates.csv
+python -m src.data.generar_mascaras            # solo calcula las máscaras que faltan
 python data\make_splits.py
 ```
 Los splits de Kaggle no cambian si no cambian sus imágenes (semilla fija); solo crece `test_propias`.
