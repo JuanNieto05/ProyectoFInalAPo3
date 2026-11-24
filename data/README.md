@@ -8,7 +8,9 @@ Tres frutas (`apple`, `banana`, `orange`) × tres calidades (`good`, `regular`, 
 | `fotos_originales/{Apple,Banana,Orange}/{good,regular,bad}/` | Fotos propias originales (respaldo) | Sí |
 | `processed/{good,regular,bad}/` | Imágenes finales 224×224 RGB (Kaggle + propias). La carpeta es la clase. | Sí |
 | `manifest.csv` | Una fila por imagen: fruta, calidad, fuente, original, `area_ratio`, `diam_ratio`, `relabeled_from` | Sí |
-| `splits.csv` | **Fuente única de verdad**: split, `grupo` (misma toma) y `tamano` | Sí |
+| `splits.csv` | **Fuente única de verdad**: split, `grupo` (misma toma), `tamano`, `d_eq`, `mask_area` | Sí |
+| `masks/{good,regular,bad}/*.png` | Máscara de la fruta (GrabCut) de cada imagen, 0 = fondo, 255 = fruta | Sí |
+| `masks.csv` | Área de cada máscara (la usa `make_splits.py` para el tamaño) | Sí |
 | `duplicates.csv` | Parejas de duplicados detectadas por dHash | Sí |
 | `conflicts_removed.csv` | Imágenes eliminadas por conflicto de etiqueta | Sí |
 | `kaggle_raw/` | Dataset original de Kaggle descomprimido | No |
@@ -30,7 +32,8 @@ Requiere `kaggle.json` en `~/.kaggle/` (no subirlo al repositorio).
 | `select_regular_candidates.py` | Propone imágenes de Kaggle candidatas a "regular" para revisión manual y aplica el reetiquetado (`--apply`) |
 | `find_duplicates.py` | Detecta duplicados por dHash (≤ 10 bits, incluye espejo); `--mover` elimina los de igual etiqueta |
 | `resolve_label_conflicts.py` | Resuelve duplicados con etiqueta distinta (conserva la "regular") |
-| `make_splits.py` | Split 70/15/15 estratificado **por grupos** (misma toma) + `test_propias` + `tamano` |
+| `python -m src.data.generar_mascaras` | Segmenta la fruta con GrabCut y guarda `masks/` y `masks.csv` (~20 min) |
+| `make_splits.py` | Split 70/15/15 estratificado **por grupos** (misma toma) + `test_propias` + `tamano` (con `d_eq`) |
 
 ## Columnas de `splits.csv`
 
@@ -42,8 +45,10 @@ Requiere `kaggle.json` en `~/.kaggle/` (no subirlo al repositorio).
 | `source` | `kaggle` o `own` |
 | `split` | `train`, `val`, `test`, `test_propias` |
 | `grupo` | id del grupo de fotos de la misma toma (usar en `StratifiedGroupKFold`) |
-| `tamano` | `pequeno` / `mediano` / `grande` (terciles de `area_ratio` por fruta, cortes con train) |
-| `area_ratio` | fracción de la imagen ocupada por la fruta (proxy de tamaño) |
+| `tamano` | `pequeno` / `mediano` / `grande` (terciles de `d_eq` por fruta, cortes con train) |
+| `d_eq` | diámetro equivalente normalizado de la máscara: 2·sqrt(`mask_area`/π) |
+| `mask_area` | fracción de la imagen procesada cubierta por la máscara GrabCut |
+| `area_ratio` | fracción de la foto original sobre el umbral simple (poco fiable en fondos con textura: no usar) |
 | `diam_ratio` | lado mayor del bounding box / lado de la imagen (≈1,0 casi siempre: no usar) |
 
 ## Protocolo de captura de fotos propias

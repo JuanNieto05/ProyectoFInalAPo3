@@ -28,9 +28,13 @@ REGLAS:
   - Fotos propias (source == "own"): TODAS van al split "test_propias". Son la
     prueba externa: miden si el modelo generaliza a fotos reales distintas a Kaggle.
   - La semilla es fija (SEMILLA), asi que el resultado siempre es el mismo.
-  - Tamano (pequeno/mediano/grande): se calcula con terciles de area_ratio de
-    cada fruta, usando SOLO las fotos de train para fijar los cortes (si se
-    calcularan con todo, el test influiria en las etiquetas).
+  - Tamano (pequeno/mediano/grande): terciles por fruta del diametro equivalente
+    normalizado d_eq = 2*sqrt(mask_area/pi), donde mask_area es la fraccion de la
+    imagen cubierta por la mascara GrabCut (data/masks.csv, generado con
+    `python -m src.data.generar_mascaras`). Los cortes se fijan SOLO con train
+    (si se calcularan con todo, el test influiria en las etiquetas).
+    Si data/masks.csv no existe se usa area_ratio (umbral simple), que es poco
+    fiable en fondos con textura (ver notebooks/03_data_preparation.ipynb).
 
 Uso (desde la raiz del proyecto, despues de quitar duplicados):
     python data/make_splits.py
@@ -188,20 +192,36 @@ for clave in sorted(estratos):
             r["split"] = destino
         actual[destino] += peso(miembros)
 
-# ----------------------- 4. Tamano por terciles de diam_ratio (cortes con train)
+# ------------------------ 4. Tamano por terciles de d_eq (cortes con train)
+MASCARAS = DATA / "masks.csv"
+if MASCARAS.exists():
+    with open(MASCARAS, newline="", encoding="utf-8") as f:
+        area_mascara = {r["filename"]: float(r["mask_area"]) for r in csv.DictReader(f)}
+    faltan = [r["filename"] for r in filas if r["filename"] not in area_mascara]
+    if faltan:
+        raise SystemExit(f"{len(faltan)} imagenes sin mascara (p. ej. {faltan[0]}). "
+                         "Ejecuta antes: python -m src.data.generar_mascaras")
+    for r in filas:
+        r["mask_area"] = area_mascara[r["filename"]]
+        r["d_eq"] = round(2 * np.sqrt(r["mask_area"] / np.pi), 4)
+    medida = "d_eq"
+else:
+    print("[aviso] no existe data/masks.csv: el tamano se calcula con area_ratio")
+    medida = "area_ratio"
+
 for fruta in sorted({r["fruit"] for r in filas}):
-    area_train = [float(r["area_ratio"]) for r in filas
-                  if r["fruit"] == fruta and r["split"] == "train"]
-    corte_1, corte_2 = np.percentile(area_train, [100 / 3, 200 / 3])
+    valores_train = [float(r[medida]) for r in filas
+                     if r["fruit"] == fruta and r["split"] == "train"]
+    corte_1, corte_2 = np.percentile(valores_train, [100 / 3, 200 / 3])
     for r in filas:
         if r["fruit"] == fruta:
-            d = float(r["area_ratio"])
+            d = float(r[medida])
             r["tamano"] = "pequeno" if d <= corte_1 else ("mediano" if d <= corte_2 else "grande")
-    print(f"{fruta}: cortes de tamano (area_ratio) = {corte_1:.3f} / {corte_2:.3f}")
+    print(f"{fruta}: cortes de tamano ({medida}) = {corte_1:.3f} / {corte_2:.3f}")
 
 # ------------------------------------------------------------------ 5. Guardar
 columnas = ["filename", "path", "fruit", "quality", "source", "split",
-            "grupo", "tamano", "area_ratio", "diam_ratio"]
+            "grupo", "tamano", "d_eq", "mask_area", "area_ratio", "diam_ratio"]
 with open(DATA / "splits.csv", "w", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, fieldnames=columnas, extrasaction="ignore")
     w.writeheader()

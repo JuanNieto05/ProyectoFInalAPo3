@@ -9,6 +9,7 @@ PROCESSED_DIR = DATA_DIR / "processed"
 OWN_DIR = DATA_DIR / "fotos_originales"     # fotos propias originales (respaldo)
 MANIFEST_CSV = DATA_DIR / "manifest.csv"
 SPLITS_CSV = DATA_DIR / "splits.csv"         # fuente unica de verdad de los splits
+MASKS_DIR = DATA_DIR / "masks"               # mascaras GrabCut (src/data/generar_mascaras.py)
 
 EXPERIMENTS_DIR = ROOT / "experiments"
 CHECKPOINTS_DIR = EXPERIMENTS_DIR / "checkpoints"

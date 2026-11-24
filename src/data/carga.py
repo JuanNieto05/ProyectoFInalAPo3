@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 
-from src.config import PROCESSED_DIR, QUALITY_CLASSES, SPLITS_CSV
+from src.config import MASKS_DIR, PROCESSED_DIR, QUALITY_CLASSES, SPLITS_CSV
 
 
 def cargar_splits(split: str | list[str] | None = None) -> pd.DataFrame:
@@ -32,6 +32,12 @@ def cargar_splits(split: str | list[str] | None = None) -> pd.DataFrame:
 def cargar_imagen(fila: pd.Series | dict) -> Image.Image:
     """Abre la imagen procesada de una fila de splits.csv como RGB."""
     return Image.open(PROCESSED_DIR / fila["path"]).convert("RGB")
+
+
+def cargar_mascara(fila: pd.Series | dict) -> np.ndarray:
+    """Máscara booleana de la fruta (data/masks/, generada con src.data.generar_mascaras)."""
+    ruta = MASKS_DIR / (fila["path"].rsplit(".", 1)[0] + ".png")
+    return np.asarray(Image.open(ruta)) > 0
 
 
 def cargar_array(fila: pd.Series | dict) -> np.ndarray:
