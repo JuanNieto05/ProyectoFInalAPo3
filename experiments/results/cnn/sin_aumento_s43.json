@@ -1,0 +1,38 @@
+{
+  "nombre": "sin_aumento_s43",
+  "cfg": {
+    "enmascarar": true,
+    "aumento": false,
+    "balance": "pesos",
+    "lr": 0.001,
+    "dropout": 0.3,
+    "filtros": [
+      16,
+      32,
+      64
+    ],
+    "wd": 0.0001,
+    "lote": 64,
+    "epocas": 100,
+    "paciencia": 15,
+    "semilla": 43
+  },
+  "mejor_epoca": 42,
+  "epocas": 57,
+  "segundos": 1295,
+  "val": {
+    "macro-F1": 0.6536,
+    "acc. balanceada": 0.7276,
+    "accuracy": 0.8157,
+    "kappa": 0.6797,
+    "F1 good": 0.8287,
+    "recall good": 0.775,
+    "precisión good": 0.8903,
+    "F1 regular": 0.2252,
+    "recall regular": 0.5312,
+    "precisión regular": 0.1429,
+    "F1 bad": 0.907,
+    "recall bad": 0.8764,
+    "precisión bad": 0.9398
+  }
+}
