@@ -31,7 +31,7 @@ La clasificación manual de productos frescos según tamaño, madurez o defectos
 * Python, Jupyter
 * NumPy, Pandas, OpenCV, scikit-image
 * scikit-learn, XGBoost
-* PyTorch / TensorFlow (por definir)
+* PyTorch (CNN, en CPU)
 * Matplotlib, Seaborn
 * Streamlit (despliegue)
 
@@ -39,14 +39,15 @@ La clasificación manual de productos frescos según tamaño, madurez o defectos
 
 | Fase CRISP-DM | Documentación | Notebook | Código |
 |---|---|---|---|
-| 1. Comprensión del negocio | [docs/crisp_dm.md](docs/crisp_dm.md), [docs/etica.md](docs/etica.md), [docs/impactos.md](docs/impactos.md) | `notebooks/01_business_understanding.ipynb` | — |
+| 1. Comprensión del negocio | [docs/crisp_dm.md](docs/crisp_dm.md), [docs/etica.md](docs/etica.md), [docs/impactos.md](docs/impactos.md) | — | — |
 | 2. Comprensión de los datos | [data/README.md](data/README.md) | `notebooks/02_data_understanding_eda.ipynb` | `src/data/` |
 | 3. Preparación de los datos | [docs/crisp_dm.md](docs/crisp_dm.md) | `notebooks/03_data_preparation.ipynb` | `src/data/`, `src/features/` |
 | 4. Modelado | [docs/formulacion_matematica.md](docs/formulacion_matematica.md), [docs/arquitectura.md](docs/arquitectura.md) | `notebooks/04_modeling_ml_clasico.ipynb`, `notebooks/04_modeling_cnn.ipynb` | `src/models/`, `src/training/` |
 | 5. Evaluación | [docs/formulacion_matematica.md](docs/formulacion_matematica.md) | `notebooks/05_evaluation.ipynb` | `src/evaluation/`, `experiments/results/` |
 | 6. Despliegue | [docs/instalacion.md](docs/instalacion.md) | — | `app/` |
 
-El diagrama de flujo personalizado de CRISP-DM está en [docs/crisp_dm.md](docs/crisp_dm.md).
+El diagrama de flujo personalizado de CRISP-DM está en [docs/crisp_dm.md](docs/crisp_dm.md)
+([SVG](docs/figures/crisp_dm_flujo.svg)). Referencias en formato IEEE: [docs/referencias.md](docs/referencias.md).
 
 ## Estructura del repositorio
 
@@ -90,7 +91,7 @@ ProyectoFInalAPo3/
    pip install -r requirements.txt
    ```
 3. Los datos ya procesados están versionados en `data/processed/` y `data/splits.csv`. Solo hace falta descargar Kaggle en `data/kaggle_raw/` para regenerarlos desde cero (ver [data/README.md](data/README.md) y [docs/GUIA_SIGUIENTE_ETAPA.md](docs/GUIA_SIGUIENTE_ETAPA.md)).
-4. Ejecutar los notebooks en orden (`01_` → `05_`).
+4. Ejecutar los notebooks en orden (`02_` → `05_`).
 5. Lanzar la aplicación:
    ```bash
    streamlit run app/app.py
