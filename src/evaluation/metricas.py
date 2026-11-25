@@ -61,3 +61,37 @@ def intervalo_bootstrap(y_true, y_pred, metrica=lambda a, b: f1_score(a, b, aver
         idx = rng.integers(0, len(y_true), len(y_true))
         vals.append(metrica(y_true[idx], y_pred[idx]))
     return float(np.percentile(vals, 100 * alfa / 2)), float(np.percentile(vals, 100 * (1 - alfa / 2)))
+
+
+def macro_f1_prevalencia(y_true, y_pred, prevalencia=(1 / 3, 1 / 3, 1 / 3)) -> float:
+    """Macro-F1 que tendría el modelo si las clases aparecieran con `prevalencia`.
+
+    La precisión depende de la proporción de clases, y "regular" es 3,7 % en test y
+    32,6 % en test_propias: el macro-F1 crudo de ambos no es comparable. Aquí se
+    repondera cada fila de la matriz de confusión (los recalls no cambian).
+    """
+    y_true, y_pred = np.asarray(y_true), np.asarray(y_pred)
+    k = len(QUALITY_CLASSES)
+    c = np.array([[((y_true == i) & (y_pred == j)).sum() for j in range(k)] for i in range(k)], float)
+    c = c / np.maximum(c.sum(1, keepdims=True), 1) * np.asarray(prevalencia)[:, None]
+    den = c.sum(0) + c.sum(1)
+    return float(np.where(den > 0, 2 * np.diag(c) / np.where(den > 0, den, 1), 0).mean())
+
+
+def bootstrap_diferencia(y_true, pred_a, pred_b, metrica, grupos=None, n: int = 1000,
+                         semilla: int = 42, alfa: float = 0.05) -> tuple[float, float, float]:
+    """(diferencia A - B, IC inferior, IC superior) con bootstrap PAREADO.
+
+    Los dos modelos se evalúan en la misma remuestra: es la comparación correcta, porque dos
+    intervalos individuales pueden solaparse y aun así diferir. Con `grupos` se remuestrean
+    tomas completas (las fotos de una misma toma no son independientes).
+    """
+    y, a, b = map(np.asarray, (y_true, pred_a, pred_b))
+    rng, vals = np.random.default_rng(semilla), []
+    ids = np.arange(len(y)) if grupos is None else pd.factorize(np.asarray(grupos))[0]
+    miembros = [np.where(ids == g)[0] for g in range(ids.max() + 1)]
+    for _ in range(n):
+        idx = np.concatenate([miembros[g] for g in rng.integers(0, len(miembros), len(miembros))])
+        vals.append(metrica(y[idx], a[idx]) - metrica(y[idx], b[idx]))
+    lo, hi = np.percentile(vals, [100 * alfa / 2, 100 * (1 - alfa / 2)])
+    return float(metrica(y, a) - metrica(y, b)), float(lo), float(hi)

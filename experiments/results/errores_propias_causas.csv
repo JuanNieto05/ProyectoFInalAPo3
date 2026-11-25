@@ -1,0 +1,31 @@
+filename,causa
+apple_good_own_00002.jpg,sombra en la máscara
+apple_good_own_00003.jpg,sombra en la máscara
+apple_good_own_00004.jpg,sombra en la máscara
+apple_good_own_00005.jpg,sombra en la máscara
+apple_good_own_00006.jpg,sombra en la máscara
+apple_regular_own_00001.jpg,sombra en la máscara
+apple_regular_own_00002.jpg,sombra en la máscara
+apple_regular_own_00003.jpg,sombra en la máscara
+banana_good_own_00003.jpg,sombra en la máscara
+apple_bad_own_00002.jpg,defecto localizado no detectado
+banana_bad_own_00002.jpg,defecto localizado no detectado
+banana_regular_own_00002.jpg,defecto localizado no detectado
+banana_regular_own_00003.jpg,defecto localizado no detectado
+banana_regular_own_00004.jpg,defecto localizado no detectado
+banana_regular_own_00005.jpg,defecto localizado no detectado
+orange_regular_own_00001.jpg,criterio: fruta verde
+orange_regular_own_00002.jpg,criterio: fruta verde
+orange_regular_own_00003.jpg,criterio: fruta verde
+apple_regular_own_00004.jpg,frontera difusa (defecto sutil)
+apple_regular_own_00006.jpg,frontera difusa (defecto sutil)
+orange_regular_own_00004.jpg,frontera difusa (defecto sutil)
+orange_bad_own_00001.jpg,frontera difusa (defecto sutil)
+apple_bad_own_00001.jpg,fondo en la máscara
+apple_bad_own_00003.jpg,fondo en la máscara
+orange_bad_own_00002.jpg,fondo en la máscara
+orange_good_own_00001.jpg,fondo en la máscara
+orange_regular_own_00005.jpg,reflejo o brillo
+banana_regular_own_00001.jpg,punto de vista atípico
+apple_good_own_00001.jpg,sin causa visible
+orange_good_own_00003.jpg,sin causa visible
