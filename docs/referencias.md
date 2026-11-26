@@ -2,11 +2,10 @@
 
 Lista para el informe final. El enunciado pide incluir **solo lo que se haya leído y usado**: antes de
 entregar, cada integrante debe confirmar que consultó lo que se cita y borrar lo que no se use en el texto.
-Las marcadas con *(verificar)* deben revisarse contra la fuente original (año, páginas o edición).
 
 ## Datos y software
 [1] R. Park, "Fruit Quality Classification," Kaggle, [Dataset]. Disponible:
-https://www.kaggle.com/datasets/ryandpark/fruit-quality-classification. *(verificar y citar la licencia declarada)*
+https://www.kaggle.com/datasets/ryandpark/fruit-quality-classification. Licencia: CC0 1.0 (dominio público).
 
 [2] F. Pedregosa *et al.*, "Scikit-learn: Machine learning in Python," *J. Mach. Learn. Res.*, vol. 12,
 pp. 2825–2830, 2011.
@@ -58,7 +57,7 @@ pp. 37–46, 1960.
 *J. King Saud Univ. – Comput. Inf. Sci.*, vol. 33, no. 3, pp. 243–257, 2021.
 
 [19] S. Naik and B. Patel, "Machine vision based fruit classification and grading – A review," *Int. J.
-Comput. Appl.*, vol. 170, no. 9, pp. 22–34, 2017. *(verificar)*
+Comput. Appl.*, vol. 170, no. 9, pp. 22–34, Jul. 2017, doi: 10.5120/ijca2017914937.
 
 [20] R. Geirhos *et al.*, "Shortcut learning in deep neural networks," *Nat. Mach. Intell.*, vol. 2,
 pp. 665–673, 2020.
@@ -81,5 +80,5 @@ para la protección de datos personales," *Diario Oficial*, 2012.
 [26] FAO, *The State of Food and Agriculture 2019: Moving Forward on Food Loss and Waste Reduction*. Rome:
 FAO, 2019.
 
-[27] Departamento Nacional de Planeación, *Pérdida y desperdicio de alimentos en Colombia*. Bogotá: DNP,
-2016. *(verificar)*
+[27] Departamento Nacional de Planeación, Dirección de Seguimiento y Evaluación de Políticas Públicas,
+*Pérdida y desperdicio de alimentos en Colombia*. Bogotá: DNP, 2016.

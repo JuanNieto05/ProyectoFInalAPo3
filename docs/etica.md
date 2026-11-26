@@ -25,7 +25,7 @@ usamos tres referencias:
 | 8 | El sistema se podría usar para rechazar fruta | Si dice "mala" a una fruta buena, se bota comida y se pierde dinero. Si dice "buena" a una mala, le llega fruta dañada al cliente. | No causar daño y cuidar el bienestar (ACM 1.2, IEEE I.1) | Medimos cada error por separado: el SVM deja pasar el 4 % de la fruta mala y rechaza el 14 % de la buena. La app dice que es una **ayuda, no la decisión final**. |
 | 9 | La app muestra qué tan seguro está el modelo | Esa "seguridad" puede engañar: con nuestras fotos, el modelo está igual de seguro cuando se equivoca que cuando acierta | Comunicar las limitaciones con claridad (ACM 1.3 y 2.5) | La app avisa **"Resultado dudoso"** cuando el modelo duda, y muestra qué parte de la foto analizó para que la persona lo pueda revisar. |
 | 10 | El tamaño se calcula en píxeles | El tamaño en la foto cambia según qué tan cerca esté la cámara. Si alguien lo usara para poner precios, podría pagar menos por una fruta grande fotografiada de lejos. | Ser honestos con las limitaciones (ACM 1.3) | La app pide tomar la foto **siempre a la misma distancia** y lo explica en pantalla. |
-| 11 | Usamos datos y código de otras personas | Usar trabajo ajeno sin citarlo es plagio, y el curso lo considera fraude | Dar crédito y respetar licencias (ACM 1.5 y 2.3, IEEE I.5) | Citamos el dataset de Kaggle, las librerías y los métodos en el README y en el informe. **Falta revisar la licencia del dataset.** |
+| 11 | Usamos datos y código de otras personas | Usar trabajo ajeno sin citarlo es plagio, y el curso lo considera fraude | Dar crédito y respetar licencias (ACM 1.5 y 2.3, IEEE I.5) | Citamos el dataset de Kaggle, las librerías y los métodos en el README y en el informe. Revisamos la licencia del dataset: es **CC0 (dominio público)**, así que se puede usar y modificar libremente; igual lo citamos. |
 | 12 | Usamos herramientas de inteligencia artificial para programar y redactar | Presentar como propio algo hecho con ayuda de IA no es honesto | Honestidad y crédito (ACM 1.3 y 1.5) | Lo declaramos en el informe. Todo lo que produjo la IA lo revisó el equipo. |
 
 ## 2. Lo que aprendimos
@@ -44,12 +44,11 @@ la de otro lugar. Eso puede perjudicar justo a quien vende fruta local.
 **La privacidad estaba donde no la esperábamos.** Nos preocupaba la cámara en vivo, pero el riesgo real
 eran los datos escondidos dentro de las fotos que subimos.
 
-## 3. Lo que falta hacer antes de entregar
+## 3. Lo que revisamos antes de entregar
 
-1. Revisar la licencia del dataset de Kaggle y citarla como aparece en su página.
-2. Escribir en el informe que usamos herramientas de IA.
-
-**Ya hecho:** borramos la ubicación GPS de las 13 fotos originales que la tenían. Ojo: las versiones viejas
+1. **Licencia del dataset de Kaggle:** es CC0 (dominio público). La citamos en las referencias.
+2. **Uso de herramientas de IA:** lo declaramos en el informe y en el README.
+3. **Ubicación GPS:** la borramos de las 13 fotos originales que la tenían. Ojo: las versiones viejas
 de esas fotos siguen en el historial de git. Si el repositorio va a ser público, el equipo puede decidir si
 también se limpia el historial.
 
