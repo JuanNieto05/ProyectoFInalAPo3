@@ -1,0 +1,9 @@
+{
+  "mejor": "SVM (RBF)",
+  "hiperparametros": {
+    "C": 30,
+    "gamma": 0.003
+  },
+  "caracteristicas": "features_fruta (80)",
+  "seleccion": "macro-F1 en val"
+}

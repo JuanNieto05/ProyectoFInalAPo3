@@ -1,0 +1,38 @@
+{
+  "nombre": "filtros_x2_completa_s42",
+  "cfg": {
+    "enmascarar": false,
+    "aumento": true,
+    "balance": "pesos",
+    "lr": 0.001,
+    "dropout": 0.3,
+    "filtros": [
+      32,
+      64,
+      128
+    ],
+    "wd": 0.0001,
+    "lote": 64,
+    "epocas": 100,
+    "paciencia": 15,
+    "semilla": 42
+  },
+  "mejor_epoca": 38,
+  "epocas": 53,
+  "segundos": 3069,
+  "val": {
+    "macro-F1": 0.6789,
+    "acc. balanceada": 0.7559,
+    "accuracy": 0.843,
+    "kappa": 0.7235,
+    "F1 good": 0.839,
+    "recall good": 0.7523,
+    "precisión good": 0.9484,
+    "F1 regular": 0.2647,
+    "recall regular": 0.5625,
+    "precisión regular": 0.1731,
+    "F1 bad": 0.9329,
+    "recall bad": 0.9528,
+    "precisión bad": 0.9138
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "nombre": "sin_aumento_completa_s42",
+  "cfg": {
+    "enmascarar": false,
+    "aumento": false,
+    "balance": "pesos",
+    "lr": 0.001,
+    "dropout": 0.3,
+    "filtros": [
+      16,
+      32,
+      64
+    ],
+    "wd": 0.0001,
+    "lote": 64,
+    "epocas": 100,
+    "paciencia": 15,
+    "semilla": 42
+  },
+  "mejor_epoca": 17,
+  "epocas": 32,
+  "segundos": 728,
+  "val": {
+    "macro-F1": 0.6418,
+    "acc. balanceada": 0.6616,
+    "accuracy": 0.8462,
+    "kappa": 0.7219,
+    "F1 good": 0.844,
+    "recall good": 0.7932,
+    "precisión good": 0.9018,
+    "F1 regular": 0.1524,
+    "recall regular": 0.25,
+    "precisión regular": 0.1096,
+    "F1 bad": 0.929,
+    "recall bad": 0.9416,
+    "precisión bad": 0.9168
+  }
+}

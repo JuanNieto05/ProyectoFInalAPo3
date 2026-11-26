@@ -1,0 +1,38 @@
+{
+  "nombre": "lr_3e-3",
+  "cfg": {
+    "enmascarar": true,
+    "aumento": true,
+    "balance": "pesos",
+    "lr": 0.003,
+    "dropout": 0.3,
+    "filtros": [
+      16,
+      32,
+      64
+    ],
+    "wd": 0.0001,
+    "lote": 64,
+    "epocas": 100,
+    "paciencia": 15,
+    "semilla": 42
+  },
+  "mejor_epoca": 47,
+  "epocas": 62,
+  "segundos": 1673,
+  "val": {
+    "macro-F1": 0.636,
+    "acc. balanceada": 0.7501,
+    "accuracy": 0.7786,
+    "kappa": 0.6329,
+    "F1 good": 0.8026,
+    "recall good": 0.6932,
+    "precisión good": 0.9531,
+    "F1 regular": 0.2115,
+    "recall regular": 0.6875,
+    "precisión regular": 0.125,
+    "F1 bad": 0.8938,
+    "recall bad": 0.8697,
+    "precisión bad": 0.9192
+  }
+}

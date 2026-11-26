@@ -1,0 +1,121 @@
+# =====================================================
+# DATOS (pesados: se comparten por Drive/OneDrive, no por Git)
+# =====================================================
+data/kaggle_raw/
+data/review/
+data/duplicates_removed/
+data/duplicates_preview/
+data/conflicts_removed/
+data/*.zip
+*.zip
+*.rar
+*.7z
+
+# Fotos originales: ya estan en el historial del repo, por eso NO se ignoran.
+# Si decides sacarlas del repo, descomenta la linea siguiente:
+# data/fotos_originales/
+
+# Se versionan (son livianos y reproducen el dataset):
+#   data/*.py, data/manifest.csv, data/splits.csv, data/duplicates.csv
+
+# =====================================================
+# MODELOS ENTRENADOS (pesados). Si el despliegue necesita el modelo final,
+# agregalo a la fuerza:  git add -f models/modelo_final.keras
+# =====================================================
+/models/
+checkpoints/
+runs/
+lightning_logs/
+wandb/
+mlruns/
+*.h5
+*.keras
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.joblib
+*.pkl
+*.pickle
+
+# =====================================================
+# CREDENCIALES Y SECRETOS (nunca subir)
+# =====================================================
+.env
+.env.*
+kaggle.json
+.kaggle/
+secrets.toml
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# =====================================================
+# PYTHON
+# =====================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# =====================================================
+# JUPYTER
+# =====================================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# =====================================================
+# EDITORES / IDE
+# =====================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =====================================================
+# SISTEMA OPERATIVO
+# =====================================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# =====================================================
+# TEMPORALES Y LOGS
+# =====================================================
+*.log
+*.tmp
+*.bak
+tmp/
+temp/
+
+# =====================================================
+# LATEX / INFORME (archivos auxiliares; el .tex y el PDF final si se versionan)
+# =====================================================
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
