@@ -133,7 +133,7 @@ Los datos procesados ya están en el repositorio. Kaggle solo hace falta para re
 ## Entregables
 
 * **Informe** (IEEE, 6 páginas): [reports/informe/informe.docx](reports/informe/informe.docx)
-* **Video** (≤ 10 min): [reports/video/](reports/video/)
+* **Video** (≤ 10 min): https://youtu.be/hdpzeVTxDm8
 * **Notebooks:** [notebooks/](notebooks/)
 
 ## Referencias y fuentes de terceros
